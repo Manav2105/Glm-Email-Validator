@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLM-Validator</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Email Validator Tool (go/email_validation)</div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div>
+                <h1>Enter your email to validate</h1>
+            </div>
+            <div class="input">
+              <form id="EmailForm">
+                <input placeholder="Enter First Name" type="text" id="firstName" required>
+                <input placeholder="Enter Last Name" type="text" id="lastName" required>
+                <input placeholder="Enter Correct Domain" type="text" pattern="[^@\s]+\.[^@\s]+" id="companyName" required>
+                <input id="submitBtn" class="btn" type="submit" value="Generate Email Formats">
+                <input type="button" id="refreshBtn" onclick="refresh()" class="btn" style="margin-left:10px;" value="Refresh">
+              </form>
+            </div>
+        </div>
+        <div id="result">
+            <h2>Results</h2>
+            <div class="validation-results">
+                <table id="resultCont" border="0"></table>          
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Email Validator Tool || All Rights Reserved.
+    </footer>
+    <div class="overlay" id="overlay" style="display: none;">
+        <img id="spinner" style="width: 60px; display: block; margin: 0px auto; position: relative; top: 45%;" src="https://services.google.com/fh/files/misc/gray2.gif">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
